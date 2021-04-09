@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>cvsalvafern</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+	--primary-color: #2875d9;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, #write {
+	font-family: 'Computer Modern';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Computer Modern';
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+html {
+	font-size: 20px;
+}
+
+body, #write {
+	max-width: 914px;
+	text-align: justify;
+	display: block;
+	margin: auto;
+}
+
+p {
+	font-size: 1rem;
+}
+
+a {
+	color: var(--primary-color);
+}
+
+/* Stuff */
+
+sup.md-footnote {
+	background-color: transparent;
+	color: var(--primary-color);
+	padding: 1px;
+	margin: 0;
+}
+
+code, .md-fences, .sourceCode {
+	background: #f2f2f2;
+}
+
+.md-fences, pre.sourceCode {
+	font-size: .7em;
+	padding: .5rem;
+}
+
+.show-fences-line-number .md-fences {
+	padding-left: .5rem;
+}
+
+blockquote {
+	margin: 2rem .2rem;
+	padding: .3rem .5rem;
+	color: #6f6f6f;
+	border-left: .4rem solid gray;
+}
+
+blockquote p {
+	padding: .2rem 1.5rem;
+}
+
+mark {
+	background: yellow;
+}
+
+figure {
+	margin: .5rem auto;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+figcaption {
+	text-align: center;
+	margin: .5rem auto;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+/* 
+    Print Mode and page breaks.
+    WkhtmlToPDF does not work on @print mode
+*/
+
+@media (max-width: 210mm) {
+	img {
+		max-height: 8cm;
+	}
+	html {
+		font-size: 16px;
+	}
+	div[title="pb"], page-break {
+		display: block;
+		page-break-after: always;
+		break-after: page;
+	}
+	nav {
+		font-size: .9rem;
+		page-break-after: always;
+		page-break-before: always;
+	}
+	nav a {
+		color: black;
+	}
+	/* Move top-level headings to a new page on the right-hand side: */
+	h1, h2 {
+		page-break-before: right;
+		break-before: recto;
+	}
+	/* Override the previous ruleset for the very first heading: */
+	h1:first-of-type, section>h1:first-child {
+		page-break-before: avoid;
+		break-before: avoid;
+	}
+	/* Headings should not be the last paragraph on a page: */
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+	}
+	/* Consecutive headings with deepening level should not be split across pages: */
+	h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 {
+		page-break-before: avoid;
+	}
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="salvador-fernández" class="md-header-anchor"></a><span>Salvador Fernández</span></h1><hr /><p><span>I am a 27 years old biologist from Spain with experience in informatics for ecology.</span></p><p><span>Email: </span><a href='mailto:salvafern@pm.me' target='_blank' class='url'>salvafern@pm.me</a><span>  // Other networks: </span><a href='https://linktr.ee/salvafern'><span>linktr.ee/salvafern</span></a></p><hr /><h3><a name="skills" class="md-header-anchor"></a><span>Skills</span></h3><figure><table><thead><tr><th><span>Languages</span></th><th><span>Coding</span></th><th><span>Databases</span></th><th><span>GIS</span></th><th><span>Agile</span></th></tr></thead><tbody><tr><td><span>English - B2</span></td><td><span>R</span></td><td><span>SQL Server</span></td><td><span>QGIS</span></td><td><span>Jira</span></td></tr><tr><td><span>Spanish - Native</span></td><td><span>SQL</span></td><td><span>PostgreSQL</span></td><td><span>ArcGIS Pro</span></td><td><span>Confluence</span></td></tr><tr><td><span>Portuguese</span></td><td><span>Python</span></td><td><span>SQLite</span></td><td><span>PostGIS</span></td><td>&nbsp;</td></tr><tr><td><span>German - A2</span></td><td><span>Bash</span></td><td><span>Access DB</span></td><td><span>Geoserver</span></td><td>&nbsp;</td></tr><tr><td><span>Dutch - A2</span></td><td><span>Git</span></td><td>&nbsp;</td><td><span>ERDDAP</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="work-experience" class="md-header-anchor"></a><span>Work Experience</span></h3><h5><a name="science-officer" class="md-header-anchor"></a><span>Science Officer</span></h5><p><em><span>Flanders Marine Institute. Oostende, Belgium. From 2019-07</span></em></p><p><span>Various activities within the Geospatial data and products team of the Flanders Marine Institute Data Centre:</span></p><ul><li><span>Create and publish updates and novel Maritime Boundaries GIS data products for MarineRegions.org.</span></li><li><span>Biological occurrences data management for the Eurobis database: Quality control on data submitted by the project partners. Formatting archaeological datasets into Darwin Event Core to meet FAIR principles.</span></li><li><span>Data products management for EMODnet-Biology: assist with the methodology and publication.</span></li><li><span>Update of EMODnet-Biology reporting tool, written in R Shiny.</span></li><li><span>Project management and publication of Bio-Oracle v2.1 and v3 for LifeWatch Belgium. Update and maintain an R package that serves Bio-Oracle and other datasets for Species Distribution Modelling: sdmpredictors</span></li><li><span>Develop an R package and R Shiny app to serve all types of data from LifeWatch Belgium. </span></li></ul><h5><a name="data-analyst" class="md-header-anchor"></a><span>Data Analyst</span></h5><p><em><span>Genera Games. Sevilla, Spain. 2018-11 to 2019-02</span></em></p><p><span>Data mining of indie mobile videogames following a Free-to-play business model. Areas like user retention, engagement or revenue were analyzed using big data of user behavior through PostgreSQL querying in the platform DeltaDNA. Monthly reports were produced and passed on to the managers for strategic decision making. Recommendation letter available.</span></p><h5><a name="science-teacher" class="md-header-anchor"></a><span>Science teacher</span></h5><p><em><span>Integra Educatio. Sevilla, Spain. 2018-02 to 2018-06</span></em></p><p><span>Support teaching of math, stats, physics, chemistry or biology for students aged between 12 and 18 years old. Individual follow-up and weekly reports delivery.</span></p><p>&nbsp;</p><h3><a name="education" class="md-header-anchor"></a><span>Education</span></h3><h5><a name="erasmus-master-marine-biodiversity-and-conservation" class="md-header-anchor"></a><span>Erasmus Master Marine Biodiversity and Conservation</span></h5><p><em><span>University of Ghent. Belgium - University of Algarve. Portugal - Galway Mayo Institute of Technology, Ireland. 2016 to 2018</span></em></p><p><span>Average grade: 754 out of 1000 - with mention Magna cum Laude</span></p><p><span>Two months professional practice carried out at the Department of Paleontology of the University of Vienna, Austria within the framework of the project: </span><em><span>Historical ecology of Lessepsian migration</span></em></p><p><span>MSc dissertation: Climate-driven range shifts in marine forests predicted in the Alboran Sea and adjacent Atlantic Ocean (At the Center of Marine Sciences CCMAR, University of Algarve). Recommendation letter available.</span></p><h5><a name="degree-in-biology" class="md-header-anchor"></a><span>Degree in Biology</span></h5><p><em><span>University of Sevilla. Spain. 2011 to 2016</span></em></p><p><span>Average grade: 7.1 out of 10</span></p><p><span>BSc dissertation: Influence of biotic and abiotic factors on the abundance of ichthyoplankton in the Guadalquivir estuary (At the Department of Zoology of the University of Sevilla)</span></p><p>&nbsp;</p><h3><a name="publications" class="md-header-anchor"></a><span>Publications</span></h3><p><strong><span>Fernández Bejarano, S.</span></strong><span>; Lonneville, B.; Vanhoorne, B.; Schepers, L. (2021). Where did we take those samples from? Georeferencing your research with marineregions.org, </span><strong><span>*in</span><span>*</span></strong><span>: Mees, J. </span><em><span>et al.</span></em><span> </span><em><span>Book of abstracts – VLIZ Marine Science Day, Online event 3 March 2021. VLIZ Special Publication,</span></em><span> 85: pp. 58</span></p><h5><a name="datasets" class="md-header-anchor"></a><span>Datasets</span></h5><p><span>Beauchard, O., Herman, P.M.J., </span><strong><span>Fernández-Bejarano, S.</span></strong><span> (2021). Data product numerical abundance of benthic macroinvertebrates in  North Sea and Baltic Sea. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund.</span></p><p><span>Flanders Marine Institute (2020). Maritime Boundaries Geodatabase: High  Seas, version 1. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/418' target='_blank' class='url'>https://doi.org/10.14284/418</a></p><p><span>Flanders Marine Institute (2020). Union of the ESRI Country shapefile  and the Exclusive Economic Zones (version 3). Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/403' target='_blank' class='url'>https://doi.org/10.14284/403</a></p><p><span>Flanders Marine Institute (2020). The intersect of the Exclusive  Economic Zones and IHO sea areas, version 4. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/402' target='_blank' class='url'>https://doi.org/10.14284/402</a></p><p><span>Flanders Marine Institute (2019). Maritime Boundaries Geodatabase:  Maritime Boundaries and Exclusive Economic Zones (200NM), version 11.  Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/386' target='_blank' class='url'>https://doi.org/10.14284/386</a></p><h5><a name="reviews" class="md-header-anchor"></a><span>Reviews</span></h5><p><span>Gilardi, A. and Lovelace, R. (2021). osmextract: Download and Read OpenStreetMap Data Extracts. R package version 0.2.1. </span><a href='https://CRAN.R-project.org/package=osmextract' target='_blank' class='url'>https://CRAN.R-project.org/package=osmextract</a></p><p><span>Schneider, L.K.; Anestis, K.;  Mansour, J.; Anschütz, A.; Gypens, N.; Hansen, P.; John, U.; Klemm, K.;  Martin, J.; Medic, J.; Not, F.; Stolte, W. (2020). A dataset on trophic modes of aquatic protists. </span><em><span>Biodiversity Data Journal 8</span></em><span>: e56648. </span><a href='https://hdl.handle.net/10.3897/bdj.8.e56648' target='_blank' class='url'>https://hdl.handle.net/10.3897/bdj.8.e56648</a></p><h5><a name="software" class="md-header-anchor"></a><span>Software</span></h5><p><strong><span>Fernández-Bejarano, S.</span></strong><span>, Schepers, L. (2020).  EMODnetBiologyMaps: Creates ggplot maps with the style of EMODnet. R  package version 0.0.1.0. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project  (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund, </span><a href='https://github.com/EMODnet/EMODnetBiologyMaps' target='_blank' class='url'>https://github.com/EMODnet/EMODnetBiologyMaps</a></p><p><em><span>Currently maintaining</span></em></p><p><span>Krystalli, A. (2020). EMODnetWFS: Access EMODnet Web Feature Service  data through R. R package version 0.0.2.  </span><a href='https://github.com/EMODnet/EMODnetWFS' target='_blank' class='url'>https://github.com/EMODnet/EMODnetWFS</a><span>. Integrated data products created  under the European Marine Observation Data Network (EMODnet) Biology  project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the  European Union under Regulation (EU) No 508/2014 of the European  Parliament and of the Council of 15 May 2014 on the European Maritime  and Fisheries Fund.</span></p><p><span>Bosch, S. (2020). sdmpredictors: Species Distribution Modelling Predictor Datasets. R package version 0.2.9. </span><a href='https://CRAN.R-project.org/package=sdmpredictors' target='_blank' class='url'>https://CRAN.R-project.org/package=sdmpredictors</a></p></div>
+</body>
+</html>
