@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>cvsalvafern</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<title>cvsalvafern</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -165,168 +165,389 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 
 :root {
-	--primary-color: #2875d9;
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
 }
 
-* {
-	box-sizing: border-box;
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
 }
 
-html, body, #write {
-	font-family: 'Computer Modern';
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Computer Modern';
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
 }
 
-h1 {
-	font-size: 2rem;
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
 }
 
-h2 {
-	font-size: 1.8rem;
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
 }
 
-h3 {
-	font-size: 1.6rem;
-}
-
-h4 {
-	font-size: 1.4rem;
-}
-
-h5 {
-	font-size: 1.2rem;
-}
-
-h6 {
-	font-size: 1rem;
-}
-
-html {
-	font-size: 20px;
-}
-
-body, #write {
-	max-width: 914px;
-	text-align: justify;
-	display: block;
-	margin: auto;
-}
-
-p {
-	font-size: 1rem;
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
 }
 
 a {
-	color: var(--primary-color);
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
 }
 
-/* Stuff */
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
 
-sup.md-footnote {
-	background-color: transparent;
-	color: var(--primary-color);
-	padding: 1px;
-	margin: 0;
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
 }
 
-code, .md-fences, .sourceCode {
-	background: #f2f2f2;
+li p.first {
+    display: inline-block;
 }
-
-.md-fences, pre.sourceCode {
-	font-size: .7em;
-	padding: .5rem;
+ul,
+ol {
+    padding-left: 30px;
 }
-
-.show-fences-line-number .md-fences {
-	padding-left: .5rem;
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
 }
-
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
 blockquote {
-	margin: 2rem .2rem;
-	padding: .3rem .5rem;
-	color: #6f6f6f;
-	border-left: .4rem solid gray;
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
 }
 
-blockquote p {
-	padding: .2rem 1.5rem;
+.CodeMirror-lines {
+    padding-left: 4px;
 }
 
-mark {
-	background: yellow;
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
 }
 
-figure {
-	margin: .5rem auto;
-	max-width: 100%;
-	display: block;
-	margin: auto;
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
 }
 
-figcaption {
-	text-align: center;
-	margin: .5rem auto;
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-	margin: auto;
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
 }
 
-/* 
-    Print Mode and page breaks.
-    WkhtmlToPDF does not work on @print mode
-*/
 
-@media (max-width: 210mm) {
-	img {
-		max-height: 8cm;
-	}
-	html {
-		font-size: 16px;
-	}
-	div[title="pb"], page-break {
-		display: block;
-		page-break-after: always;
-		break-after: page;
-	}
-	nav {
-		font-size: .9rem;
-		page-break-after: always;
-		page-break-before: always;
-	}
-	nav a {
-		color: black;
-	}
-	/* Move top-level headings to a new page on the right-hand side: */
-	h1, h2 {
-		page-break-before: right;
-		break-before: recto;
-	}
-	/* Override the previous ruleset for the very first heading: */
-	h1:first-of-type, section>h1:first-child {
-		page-break-before: avoid;
-		break-before: avoid;
-	}
-	/* Headings should not be the last paragraph on a page: */
-	h1, h2, h3, h4, h5, h6 {
-		page-break-after: avoid;
-	}
-	/* Consecutive headings with deepening level should not be split across pages: */
-	h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 {
-		page-break-before: avoid;
-	}
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
 }
 
 
 </style>
 </head>
 <body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="salvador-fernández" class="md-header-anchor"></a><span>Salvador Fernández</span></h1><hr /><p><span>I am a 27 years old biologist from Spain with experience in informatics for ecology.</span></p><p><span>Email: </span><a href='mailto:salvafern@pm.me' target='_blank' class='url'>salvafern@pm.me</a><span>  // Other networks: </span><a href='https://linktr.ee/salvafern'><span>linktr.ee/salvafern</span></a></p><hr /><h3><a name="skills" class="md-header-anchor"></a><span>Skills</span></h3><figure><table><thead><tr><th><span>Languages</span></th><th><span>Coding</span></th><th><span>Databases</span></th><th><span>GIS</span></th><th><span>Agile</span></th></tr></thead><tbody><tr><td><span>English - B2</span></td><td><span>R</span></td><td><span>SQL Server</span></td><td><span>QGIS</span></td><td><span>Jira</span></td></tr><tr><td><span>Spanish - Native</span></td><td><span>SQL</span></td><td><span>PostgreSQL</span></td><td><span>ArcGIS Pro</span></td><td><span>Confluence</span></td></tr><tr><td><span>Portuguese</span></td><td><span>Python</span></td><td><span>SQLite</span></td><td><span>PostGIS</span></td><td>&nbsp;</td></tr><tr><td><span>German - A2</span></td><td><span>Bash</span></td><td><span>Access DB</span></td><td><span>Geoserver</span></td><td>&nbsp;</td></tr><tr><td><span>Dutch - A2</span></td><td><span>Git</span></td><td>&nbsp;</td><td><span>ERDDAP</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="work-experience" class="md-header-anchor"></a><span>Work Experience</span></h3><h5><a name="science-officer" class="md-header-anchor"></a><span>Science Officer</span></h5><p><em><span>Flanders Marine Institute. Oostende, Belgium. From 2019-07</span></em></p><p><span>Various activities within the Geospatial data and products team of the Flanders Marine Institute Data Centre:</span></p><ul><li><span>Create and publish updates and novel Maritime Boundaries GIS data products for MarineRegions.org.</span></li><li><span>Biological occurrences data management for the Eurobis database: Quality control on data submitted by the project partners. Formatting archaeological datasets into Darwin Event Core to meet FAIR principles.</span></li><li><span>Data products management for EMODnet-Biology: assist with the methodology and publication.</span></li><li><span>Update of EMODnet-Biology reporting tool, written in R Shiny.</span></li><li><span>Project management and publication of Bio-Oracle v2.1 and v3 for LifeWatch Belgium. Update and maintain an R package that serves Bio-Oracle and other datasets for Species Distribution Modelling: sdmpredictors</span></li><li><span>Develop an R package and R Shiny app to serve all types of data from LifeWatch Belgium. </span></li></ul><h5><a name="data-analyst" class="md-header-anchor"></a><span>Data Analyst</span></h5><p><em><span>Genera Games. Sevilla, Spain. 2018-11 to 2019-02</span></em></p><p><span>Data mining of indie mobile videogames following a Free-to-play business model. Areas like user retention, engagement or revenue were analyzed using big data of user behavior through PostgreSQL querying in the platform DeltaDNA. Monthly reports were produced and passed on to the managers for strategic decision making. Recommendation letter available.</span></p><h5><a name="science-teacher" class="md-header-anchor"></a><span>Science teacher</span></h5><p><em><span>Integra Educatio. Sevilla, Spain. 2018-02 to 2018-06</span></em></p><p><span>Support teaching of math, stats, physics, chemistry or biology for students aged between 12 and 18 years old. Individual follow-up and weekly reports delivery.</span></p><p>&nbsp;</p><h3><a name="education" class="md-header-anchor"></a><span>Education</span></h3><h5><a name="erasmus-master-marine-biodiversity-and-conservation" class="md-header-anchor"></a><span>Erasmus Master Marine Biodiversity and Conservation</span></h5><p><em><span>University of Ghent. Belgium - University of Algarve. Portugal - Galway Mayo Institute of Technology, Ireland. 2016 to 2018</span></em></p><p><span>Average grade: 754 out of 1000 - with mention Magna cum Laude</span></p><p><span>Two months professional practice carried out at the Department of Paleontology of the University of Vienna, Austria within the framework of the project: </span><em><span>Historical ecology of Lessepsian migration</span></em></p><p><span>MSc dissertation: Climate-driven range shifts in marine forests predicted in the Alboran Sea and adjacent Atlantic Ocean (At the Center of Marine Sciences CCMAR, University of Algarve). Recommendation letter available.</span></p><h5><a name="degree-in-biology" class="md-header-anchor"></a><span>Degree in Biology</span></h5><p><em><span>University of Sevilla. Spain. 2011 to 2016</span></em></p><p><span>Average grade: 7.1 out of 10</span></p><p><span>BSc dissertation: Influence of biotic and abiotic factors on the abundance of ichthyoplankton in the Guadalquivir estuary (At the Department of Zoology of the University of Sevilla)</span></p><p>&nbsp;</p><h3><a name="publications" class="md-header-anchor"></a><span>Publications</span></h3><p><strong><span>Fernández Bejarano, S.</span></strong><span>; Lonneville, B.; Vanhoorne, B.; Schepers, L. (2021). Where did we take those samples from? Georeferencing your research with marineregions.org, </span><strong><span>*in</span><span>*</span></strong><span>: Mees, J. </span><em><span>et al.</span></em><span> </span><em><span>Book of abstracts – VLIZ Marine Science Day, Online event 3 March 2021. VLIZ Special Publication,</span></em><span> 85: pp. 58</span></p><h5><a name="datasets" class="md-header-anchor"></a><span>Datasets</span></h5><p><span>Beauchard, O., Herman, P.M.J., </span><strong><span>Fernández-Bejarano, S.</span></strong><span> (2021). Data product numerical abundance of benthic macroinvertebrates in  North Sea and Baltic Sea. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund.</span></p><p><span>Flanders Marine Institute (2020). Maritime Boundaries Geodatabase: High  Seas, version 1. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/418' target='_blank' class='url'>https://doi.org/10.14284/418</a></p><p><span>Flanders Marine Institute (2020). Union of the ESRI Country shapefile  and the Exclusive Economic Zones (version 3). Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/403' target='_blank' class='url'>https://doi.org/10.14284/403</a></p><p><span>Flanders Marine Institute (2020). The intersect of the Exclusive  Economic Zones and IHO sea areas, version 4. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/402' target='_blank' class='url'>https://doi.org/10.14284/402</a></p><p><span>Flanders Marine Institute (2019). Maritime Boundaries Geodatabase:  Maritime Boundaries and Exclusive Economic Zones (200NM), version 11.  Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/386' target='_blank' class='url'>https://doi.org/10.14284/386</a></p><h5><a name="reviews" class="md-header-anchor"></a><span>Reviews</span></h5><p><span>Gilardi, A. and Lovelace, R. (2021). osmextract: Download and Read OpenStreetMap Data Extracts. R package version 0.2.1. </span><a href='https://CRAN.R-project.org/package=osmextract' target='_blank' class='url'>https://CRAN.R-project.org/package=osmextract</a></p><p><span>Schneider, L.K.; Anestis, K.;  Mansour, J.; Anschütz, A.; Gypens, N.; Hansen, P.; John, U.; Klemm, K.;  Martin, J.; Medic, J.; Not, F.; Stolte, W. (2020). A dataset on trophic modes of aquatic protists. </span><em><span>Biodiversity Data Journal 8</span></em><span>: e56648. </span><a href='https://hdl.handle.net/10.3897/bdj.8.e56648' target='_blank' class='url'>https://hdl.handle.net/10.3897/bdj.8.e56648</a></p><h5><a name="software" class="md-header-anchor"></a><span>Software</span></h5><p><strong><span>Fernández-Bejarano, S.</span></strong><span>, Schepers, L. (2020).  EMODnetBiologyMaps: Creates ggplot maps with the style of EMODnet. R  package version 0.0.1.0. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project  (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund, </span><a href='https://github.com/EMODnet/EMODnetBiologyMaps' target='_blank' class='url'>https://github.com/EMODnet/EMODnetBiologyMaps</a></p><p><em><span>Currently maintaining</span></em></p><p><span>Krystalli, A. (2020). EMODnetWFS: Access EMODnet Web Feature Service  data through R. R package version 0.0.2.  </span><a href='https://github.com/EMODnet/EMODnetWFS' target='_blank' class='url'>https://github.com/EMODnet/EMODnetWFS</a><span>. Integrated data products created  under the European Marine Observation Data Network (EMODnet) Biology  project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the  European Union under Regulation (EU) No 508/2014 of the European  Parliament and of the Council of 15 May 2014 on the European Maritime  and Fisheries Fund.</span></p><p><span>Bosch, S. (2020). sdmpredictors: Species Distribution Modelling Predictor Datasets. R package version 0.2.9. </span><a href='https://CRAN.R-project.org/package=sdmpredictors' target='_blank' class='url'>https://CRAN.R-project.org/package=sdmpredictors</a></p></div>
+<div id='write'  class=''><h1><a name="salvador-fernández" class="md-header-anchor"></a><span>Salvador Fernández</span></h1><hr /><p><span>I am a 27 years old biologist from Spain with experience in informatics for ecology.</span></p><p><span>Email: </span><a href='mailto:salvafern@pm.me' target='_blank' class='url'>salvafern@pm.me</a><span>  // Other networks: </span><a href='https://linktr.ee/salvafern'><span>linktr.ee/salvafern</span></a></p><hr /><h3><a name="skills" class="md-header-anchor"></a><span>Skills</span></h3><figure><table><thead><tr><th><span>Languages</span></th><th><span>Coding</span></th><th><span>Databases</span></th><th><span>GIS</span></th><th><span>Agile</span></th></tr></thead><tbody><tr><td><span>English - B2</span></td><td><span>R</span></td><td><span>SQL Server</span></td><td><span>QGIS</span></td><td><span>Jira</span></td></tr><tr><td><span>Spanish - Native</span></td><td><span>SQL</span></td><td><span>PostgreSQL</span></td><td><span>ArcGIS Pro</span></td><td><span>Confluence</span></td></tr><tr><td><span>Portuguese</span></td><td><span>Python</span></td><td><span>SQLite</span></td><td><span>PostGIS</span></td><td>&nbsp;</td></tr><tr><td><span>German - A2</span></td><td><span>Bash</span></td><td><span>Access DB</span></td><td><span>Geoserver</span></td><td>&nbsp;</td></tr><tr><td><span>Dutch - A2</span></td><td><span>Git</span></td><td>&nbsp;</td><td><span>ERDDAP</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="work-experience" class="md-header-anchor"></a><span>Work Experience</span></h3><h5><a name="science-officer" class="md-header-anchor"></a><span>Science Officer</span></h5><p><em><span>Flanders Marine Institute. Oostende, Belgium. From 2019-07</span></em></p><p><span>Various activities within the Geospatial data and products team of the Flanders Marine Institute Data Centre:</span></p><ul><li><span>Create and publish updates and novel Maritime Boundaries GIS data products for MarineRegions.org.</span></li><li><span>Biological occurrences data management for the Eurobis database: Quality control on data submitted by the project partners. Formatting archaeological datasets into Darwin Event Core to meet FAIR principles.</span></li><li><span>Data products management for EMODnet-Biology: assist with the methodology and publication.</span></li><li><span>Update of EMODnet-Biology reporting tool, written in R Shiny.</span></li><li><span>Project management and publication of Bio-Oracle v2.1 and v3 for LifeWatch Belgium. Update and maintain an R package that serves Bio-Oracle and other datasets for Species Distribution Modelling: sdmpredictors</span></li><li><span>Develop an R package and R Shiny app to serve all types of data from LifeWatch Belgium. </span></li></ul><h5><a name="data-analyst" class="md-header-anchor"></a><span>Data Analyst</span></h5><p><em><span>Genera Games. Sevilla, Spain. 2018-11 to 2019-02</span></em></p><p><span>Data mining of indie mobile videogames following a Free-to-play business model. Areas like user retention, engagement or revenue were analyzed using big data of user behavior through PostgreSQL querying in the platform DeltaDNA. Monthly reports were produced and passed on to the managers for strategic decision making. Recommendation letter available.</span></p><h5><a name="science-teacher" class="md-header-anchor"></a><span>Science teacher</span></h5><p><em><span>Integra Educatio. Sevilla, Spain. 2018-02 to 2018-06</span></em></p><p><span>Support teaching of math, stats, physics, chemistry or biology for students aged between 12 and 18 years old. Individual follow-up and weekly reports delivery.</span></p><p>&nbsp;</p><h3><a name="education" class="md-header-anchor"></a><span>Education</span></h3><h5><a name="erasmus-master-marine-biodiversity-and-conservation" class="md-header-anchor"></a><span>Erasmus Master Marine Biodiversity and Conservation</span></h5><p><em><span>University of Ghent. Belgium - University of Algarve. Portugal - Galway Mayo Institute of Technology, Ireland. 2016 to 2018</span></em></p><p><span>Average grade: 754 out of 1000 - with mention Magna cum Laude</span></p><p><span>Two months professional practice carried out at the Department of Paleontology of the University of Vienna, Austria within the framework of the project: </span><em><span>Historical ecology of Lessepsian migration</span></em></p><p><span>MSc dissertation: Climate-driven range shifts in marine forests predicted in the Alboran Sea and adjacent Atlantic Ocean (At the Center of Marine Sciences CCMAR, University of Algarve). Recommendation letter available.</span></p><h5><a name="degree-in-biology" class="md-header-anchor"></a><span>Degree in Biology</span></h5><p><em><span>University of Sevilla. Spain. 2011 to 2016</span></em></p><p><span>Average grade: 7.44 out of 10</span></p><p><span>BSc dissertation: Influence of biotic and abiotic factors on the abundance of ichthyoplankton in the Guadalquivir estuary (At the Department of Zoology of the University of Sevilla)</span></p><p>&nbsp;</p><h3><a name="publications" class="md-header-anchor"></a><span>Publications</span></h3><p><strong><span>Fernández Bejarano, S.</span></strong><span>; Lonneville, B.; Vanhoorne, B.; Schepers, L. (2021). Where did we take those samples from? Georeferencing your research with marineregions.org, </span><strong><span>*in</span><span>*</span></strong><span>: Mees, J. </span><em><span>et al.</span></em><span> </span><em><span>Book of abstracts – VLIZ Marine Science Day, Online event 3 March 2021. VLIZ Special Publication,</span></em><span> 85: pp. 58</span></p><h5><a name="datasets" class="md-header-anchor"></a><span>Datasets</span></h5><p><span>Beauchard, O., Herman, P.M.J., </span><strong><span>Fernández-Bejarano, S.</span></strong><span> (2021). Data product numerical abundance of benthic macroinvertebrates in  North Sea and Baltic Sea. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund.</span></p><p><span>Flanders Marine Institute (2020). Maritime Boundaries Geodatabase: High  Seas, version 1. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/418' target='_blank' class='url'>https://doi.org/10.14284/418</a></p><p><span>Flanders Marine Institute (2020). Union of the ESRI Country shapefile  and the Exclusive Economic Zones (version 3). Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/403' target='_blank' class='url'>https://doi.org/10.14284/403</a></p><p><span>Flanders Marine Institute (2020). The intersect of the Exclusive  Economic Zones and IHO sea areas, version 4. Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/402' target='_blank' class='url'>https://doi.org/10.14284/402</a></p><p><span>Flanders Marine Institute (2019). Maritime Boundaries Geodatabase:  Maritime Boundaries and Exclusive Economic Zones (200NM), version 11.  Available online at </span><a href='https://www.marineregions.org/' target='_blank' class='url'>https://www.marineregions.org/</a><span>. </span><a href='https://doi.org/10.14284/386' target='_blank' class='url'>https://doi.org/10.14284/386</a></p><h5><a name="reviews" class="md-header-anchor"></a><span>Reviews</span></h5><p><span>Gilardi, A. and Lovelace, R. (2021). osmextract: Download and Read OpenStreetMap Data Extracts. R package version 0.2.1. </span><a href='https://CRAN.R-project.org/package=osmextract' target='_blank' class='url'>https://CRAN.R-project.org/package=osmextract</a></p><p><span>Schneider, L.K.; Anestis, K.;  Mansour, J.; Anschütz, A.; Gypens, N.; Hansen, P.; John, U.; Klemm, K.;  Martin, J.; Medic, J.; Not, F.; Stolte, W. (2020). A dataset on trophic modes of aquatic protists. </span><em><span>Biodiversity Data Journal 8</span></em><span>: e56648. </span><a href='https://hdl.handle.net/10.3897/bdj.8.e56648' target='_blank' class='url'>https://hdl.handle.net/10.3897/bdj.8.e56648</a></p><h5><a name="software" class="md-header-anchor"></a><span>Software</span></h5><p><strong><span>Fernández-Bejarano, S.</span></strong><span>, Schepers, L. (2020).  EMODnetBiologyMaps: Creates ggplot maps with the style of EMODnet. R  package version 0.0.1.0. Integrated data products created under the  European Marine Observation Data Network (EMODnet) Biology project  (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European  Union under Regulation (EU) No 508/2014 of the European Parliament and  of the Council of 15 May 2014 on the European Maritime and Fisheries  Fund, </span><a href='https://github.com/EMODnet/EMODnetBiologyMaps' target='_blank' class='url'>https://github.com/EMODnet/EMODnetBiologyMaps</a></p><p><em><span>Currently maintaining</span></em></p><p><span>Krystalli, A. (2020). EMODnetWFS: Access EMODnet Web Feature Service  data through R. R package version 0.0.2.  </span><a href='https://github.com/EMODnet/EMODnetWFS' target='_blank' class='url'>https://github.com/EMODnet/EMODnetWFS</a><span>. Integrated data products created  under the European Marine Observation Data Network (EMODnet) Biology  project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the  European Union under Regulation (EU) No 508/2014 of the European  Parliament and of the Council of 15 May 2014 on the European Maritime  and Fisheries Fund.</span></p><p><span>Bosch, S. (2020). sdmpredictors: Species Distribution Modelling Predictor Datasets. R package version 0.2.9. </span><a href='https://CRAN.R-project.org/package=sdmpredictors' target='_blank' class='url'>https://CRAN.R-project.org/package=sdmpredictors</a></p></div>
 </body>
 </html>
