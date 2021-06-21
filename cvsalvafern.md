@@ -62,7 +62,7 @@ MSc dissertation: Climate-driven range shifts in marine forests predicted in the
 
 *University of Sevilla. Spain. 2011 to 2016*
 
-Average grade: 7.1 out of 10
+Average grade: 7.44 out of 10
 
 BSc dissertation: Influence of biotic and abiotic factors on the abundance of ichthyoplankton in the Guadalquivir estuary (At the Department of Zoology of the University of Sevilla)
 
