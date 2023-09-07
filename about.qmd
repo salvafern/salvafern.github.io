@@ -1,0 +1,22 @@
+---
+title: "About"
+---
+
+About this site
+
+```{r}
+mtcars
+write.csv(mtcars, "mtcars.csv")
+```
+
+
+```{python}
+import pandas as pd
+import os
+
+
+df = pd.read_csv("mtcars.csv")
+print(df)
+
+os.remove("mtcars.csv")
+```
