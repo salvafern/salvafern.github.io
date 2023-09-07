@@ -1,5 +1,25 @@
 ---
-title: "salvafern"
+title: "Salvador Fernández Bejarano"
+about:
+  template: jolla
+  image: img/profile.jpeg
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/salvafern
+    - icon: github
+      text: github
+      href: https://github.com/salvafern
+    - icon: linkedin
+      text: linkedin
+      href: https://www.linkedin.com/in/salvafernandez/
+    - icon: bi-send-fill
+      text: email
+      href: mailto:salvafern@pm.me
 ---
 
-First quarto website, just testing
+Data Manager, [Flanders Marine Institute](https://www.vliz.be)
+
+---
+⚠️ Website under development ⚠️
+

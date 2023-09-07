@@ -3,13 +3,17 @@ project:
   output-dir: docs
 
 website:
-  title: "salvafern"
+  title: "Salva's website"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: cv.qmd
+        text: Resume
+      - href: software.qmd
+        text: Software
+      - href: talks.qmd
+        text: Talks and Workshops
 format:
   html:
     theme: cosmo
