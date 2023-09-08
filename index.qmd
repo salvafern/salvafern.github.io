@@ -3,18 +3,10 @@ title: "Salvador Fernández Bejarano"
 about:
   template: jolla
   image: img/profile.jpeg
+  image-shape: "rectangle"
   links:
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/salvafern
-    - icon: github
-      text: github
-      href: https://github.com/salvafern
-    - icon: linkedin
-      text: linkedin
-      href: https://www.linkedin.com/in/salvafernandez/
     - icon: bi-send-fill
-      text: email
+      text: Send me a message
       href: mailto:salvafern@pm.me
 ---
 

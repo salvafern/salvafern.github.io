@@ -4,16 +4,28 @@ project:
 
 website:
   title: "Salva's website"
+  cookie-consent:
+    type: express
+    style: headline
+  open-graph: true
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: cv.qmd
         text: Resume
-      - href: software.qmd
-        text: Software
-      - href: talks.qmd
-        text: Talks and Workshops
+      - href: portfolio.qmd
+        text: Portfolio
+    right:
+      - icon: github
+        href: https://github.com/salvafern
+      - icon: twitter
+        href: https://twitter.com/salvafern
+      - icon: linkedin
+        href: https://www.linkedin.com/in/salvafernandez/
+  page-footer: 
+    center: "Copyright 2023, Salvador Fernández Bejarano"
+    
 format:
   html:
     theme: cosmo
@@ -21,3 +33,4 @@ format:
     toc: true
 
 editor: visual
+
