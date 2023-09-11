@@ -5,12 +5,15 @@ project:
 website:
   title: "Salva's website"
   open-graph: true
+  search: false
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: cv.qmd
         text: Resume
+      - href: portfolio.qmd
+        text: Portfolio
     right:
       - icon: github
         href: https://github.com/salvafern

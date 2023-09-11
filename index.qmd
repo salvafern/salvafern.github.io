@@ -8,6 +8,10 @@ about:
     - icon: envelope
       text: Email
       href: mailto:salvafern@pm.me
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/salvafern
+    
 ---
 
 Data Manager, [Flanders Marine Institute ](https://www.vliz.be)

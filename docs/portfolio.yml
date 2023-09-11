@@ -1,0 +1,55 @@
+
+- category: R packages
+  description: |
+    R packages I have developed, intensively collaborated or maintained.
+  tiles:
+    - title: mregions2
+      subtitle: Access Data from Marineregions.org The Marine Regions Gazetteer and the Marine Regions Data Products
+      href: https://lifewatch.github.io/mregions2
+      code: https://github.com/lifewatch/mregions2
+      thumbnail: img/mregions2.jpg
+    - title: sdmpredictors
+      subtitle: a compilation of species distribution modelling predictors data
+      href: https://lifewatch.github.io/sdmpredictors
+      code: https://github.com/lifewatch/sdmpredictors
+      thumbnail: img/sdmpredictors.jpg
+    - title: EMODnetWFS
+      subtitle: Access EMODnet Web Feature Service data through R
+      href: https://emodnet.github.io/EMODnetWFS/
+      code: https://github.com/EMODnet/EMODnetWFS/
+      thumbnail: img/emodnetwfs.jpg
+    - title: eurobis
+      subtitle: Download data from EurOBIS using the LifeWatch/EMODnet-Biology Web Feature Services
+      href: https://lifewatch.github.io/eurobis/
+      code: https://github.com/lifewatch/eurobis/
+      thumbnail: img/eurobis.jpg
+    - title: lwdataexplorer
+      subtitle: Retrieves biodiversity, environmental or genetic data from the projects supported by LifeWatch Belgium
+      href: https://lifewatch.github.io/lwdataexplorer/
+      code: https://github.com/lifewatch/lwdataexplorer/
+      thumbnail: img/lwdataexplorer.jpg
+- category: R Shiny apps
+  description: |
+    R Shiny applications that I have developed, intensively collaborated or maintained.
+  tiles:
+    - title: LifeWatch Data Explorer
+      subtitle: Retrieves biodiversity, environmental or genetic data from the projects supported by LifeWatch Belgium
+      href: https://www.lifewatch.be/en/lifewatch-data-explorer
+      thumbnail: img/lwde.jpg    
+    - title: EMODnet-Biology Reporting Tool
+      subtitle: Summarizes key metrics of the Biology lot of EMODnet for quarterly reporting
+      href: https://rshiny.emodnet-biology.eu/reporting/
+      thumbnail: img/reporting-tool.jpg    
+- category: Data servers
+  description: |
+    Data servers I have worked on.
+  tiles:
+    - title: Bio-Oracle ERDDAP Server
+      subtitle: Simple, consistent way to download subsets of scientific datasets in common file formats and make graphs and maps
+      href: https://erddap.bio-oracle.org
+      thumbnail: img/erddap-bio-oracle.jpg   
+    - title: VLIZ Geoserver
+      subtitle: Publishes data from any major spatial data source using open standards
+      href: https://geo.vliz.be
+      thumbnail: img/geoserver.jpg 
+  

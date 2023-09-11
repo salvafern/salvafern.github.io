@@ -1,31 +1,8 @@
 ---
 title: "Portfolio"
+toc: false
+listing:
+  template: docs/portfolio.ejs
+  contents: portfolio.yml
+  
 ---
-
-# R packages
-
-mregions2
-sdmpredictors
-lwdataexplorer
-eurobis
-mregions
-
-# R Shiny Apps
-LifeWatch Data Explorer
-EMODnet-Biology / LifeWatch Reporting Tool
-
-# ERDDAP
-Bio-Oracle erddap
-
-# Geoserver
-geo.vliz.be
-
-
-
-
-
-
-
-
-
-
