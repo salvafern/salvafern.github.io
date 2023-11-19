@@ -1,5 +1,4 @@
 ---
-title: "Salvador Fernández Bejarano"
 format: 
   pdf: 
     documentclass: article
@@ -14,10 +13,19 @@ format:
     fontsize: '16'
 ---
 
+```{=tex}
+\begin{center}
+    {\Huge Salvador J. Fernández Bejarano} \\[1ex]
+    \vspace{2ex}
+    \includegraphics[width=4cm]{docs/img/cvimg.png}
+\end{center}
 
-|                                                                                    |
-|------------------------------------------------------------------------------------|
-| Nationality: Spain - Birth: 1993-10-13 - +34 664684098 - salvafern@pm.me |
+
+\begin{center}
+    \textbf{Nationality:} Spain - \textbf{Birth:} 1993-10-13 - \textbf{Phone:} +34 664684098 - \textbf{Email:} salvafern@pm.me
+\end{center}
+\hrulefill
+```
 
 ## Experience
 
