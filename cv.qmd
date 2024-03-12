@@ -22,7 +22,7 @@ format:
 
 
 \begin{center}
-    \textbf{Location:} Ghent, Belgium - \textbf{Nationality:} Spain - \textbf{Birth:} 1993-10-13 - \textbf{Email:} salvafern@pm.me
+    \textbf{Based in} Ghent, Belgium - \textbf{Nationality:} Spain - \textbf{Birth:} 1993-10-13 - \textbf{Email:} salvafern@pm.me
 \end{center}
 \hrulefill
 ```

@@ -1,0 +1,29 @@
+---
+title: "Your Cover Letter"
+output:
+  quarto::pdf_document:
+    latex_engine: latexmk
+    latex_auto_mk: true
+---
+
+```{=latex}
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{minipage}[t]{0.3\textwidth}
+    {\Huge me} \\[1ex]
+    \vspace{2ex}
+    \includegraphics[width=4cm]{docs/img/cvimg.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+    \textbf{Location:} somewhere - \textbf{Nationality:} somewhere - \textbf{Birth:} some date - \textbf{Email:} some@email.com
+\end{minipage}
+
+\hrulefill
+
+% Your cover letter content goes here.
+
+\end{document}
