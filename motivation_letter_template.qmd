@@ -1,29 +1,34 @@
 ---
-title: "Your Cover Letter"
-output:
-  quarto::pdf_document:
-    latex_engine: latexmk
-    latex_auto_mk: true
+format: 
+  pdf: 
+    documentclass: article
+    geometry:
+      - top=15mm
+      - left=20mm
+      - right=20mm
+      - bottom=20mm
+      - heightrounded
+    fontfamily: libertine
+    colorlinks: true
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{scrlayer-scrpage}
+        \pagenumbering{gobble}
+        \rohead{Tuesday, March 12 2024}
+        \cofoot{© Salvador J. Fernández Bejarano 2024}
 ---
 
-```{=latex}
-\documentclass{article}
-\usepackage{graphicx}
+Dear,
 
-\begin{document}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu quam eu nibh dignissim posuere. Integer in nulla sodales, elementum sapien sed, consectetur mauris. Quisque pharetra lobortis placerat. Nam auctor leo dui, eu tempus odio imperdiet blandit. Duis id condimentum ligula. Maecenas at dui felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut rutrum justo nibh, a faucibus erat vulputate in. Praesent rutrum felis nec ante lacinia, in dictum dolor tristique. Aenean diam metus, facilisis in ex non, euismod dapibus est. Quisque luctus odio sed eros auctor congue.
 
-\begin{minipage}[t]{0.3\textwidth}
-    {\Huge me} \\[1ex]
-    \vspace{2ex}
-    \includegraphics[width=4cm]{docs/img/cvimg.png}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.6\textwidth}
-    \textbf{Location:} somewhere - \textbf{Nationality:} somewhere - \textbf{Birth:} some date - \textbf{Email:} some@email.com
-\end{minipage}
+Curabitur ut leo sit amet neque dignissim posuere nec et elit. Praesent semper ex eu mattis pharetra. Mauris ut finibus augue. Nullam iaculis varius nibh. Nunc sed enim non nulla luctus tempor eget nec sapien. Fusce ipsum est, tincidunt sed lacus et, scelerisque suscipit lorem. Donec sit amet convallis sem, in ultricies est. Aenean molestie placerat neque vel luctus.
 
-\hrulefill
+Nam vehicula bibendum nunc. Maecenas maximus orci vitae est sagittis, eu porta nunc pellentesque. Sed nec tortor id tortor viverra rhoncus a eu mi. Sed bibendum mi id metus venenatis, eget dignissim nisl fermentum. Donec pretium lectus nec nulla ultricies tincidunt. Vivamus in dolor in mauris gravida mattis. Mauris ac diam quis nisi convallis aliquam sit amet at purus. In semper ac mauris et finibus. Integer commodo molestie libero, eget efficitur turpis ultrices vitae. Ut ultrices, leo a volutpat faucibus, nisl lorem bibendum sem, sit amet mattis sapien elit in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
 
-% Your cover letter content goes here.
+Kind regards,
 
-\end{document}
+Salvador J. Fernandez Bejarano
+
+![](docs/img/profile.jpeg){fig-align="left" width="2.2cm"}

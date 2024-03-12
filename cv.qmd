@@ -6,11 +6,16 @@ format:
       - top=10mm
       - left=15mm
       - right=15mm
-      - bottom=5mm
+      - bottom=15mm
       - heightrounded
     fontfamily: libertine
     colorlinks: true
     fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{scrlayer-scrpage}
+        \pagenumbering{gobble}
+        \cofoot{© Salvador J. Fernández Bejarano 2024}
 ---
 
 ```{=tex}
