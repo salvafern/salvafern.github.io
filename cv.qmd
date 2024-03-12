@@ -100,6 +100,7 @@ Spanish (Native). English B2, Portuguese B1, German A2, Dutch A2.
 
 ## Internships Supervised
 
+-   Supervised and mentored Van den Bremt J., a Bioinformatics master student at Ghent University, in the development of viralprod: an R package to automating viral production data analyses. The project involved turning existing data analysis scripts into contained R functions that could be wrapped as an R package and published on GitHub. The work of Van den Bremt can be consulted at: https://github.com/mdhishamshaikh/ViralProduction_R/commits?author=jonasvdnbrem (2023-08/2023-09)
 -   Supervised and mentored Pohl L., a student in the IMBRSea MSc, in the start phase of the development of the mregions2: an R package to access data from Marineregions.org. The project involved learning software development tools such as version control with Git and GitHub, automatic testing, continuous integration and deployment, and specific knowledge writing R extensions. The contributions of Pohl can be found at: https://github.com/lifewatch/mregions2/commits?author=lottepohl (2022-04/2020-06)
 -   Supervised and mentored D'Hurlaborde A., a student in the IMBRSea MSc, in the creation of a new GIS data product: the Marine Regions' Extended Continental Shelves v1. The project involved extensive research on the United Nations Law of the Sea, data management, and the use of geospatial software tools. The results of the internship were presented on a dedicated website created by the student: https://sites.google.com/imbrsea.eu/alicedhurlaborde/home. (2020-04/2020-06)
 
