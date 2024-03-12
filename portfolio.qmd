@@ -4,5 +4,4 @@ toc: false
 listing:
   template: docs/portfolio.ejs
   contents: portfolio.yml
-  
 ---

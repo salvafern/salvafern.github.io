@@ -11,12 +11,10 @@ about:
     - icon: twitter
       text: Twitter
       href: https://twitter.com/salvafern
-    
 ---
 
-Data Manager, [Flanders Marine Institute ](https://www.vliz.be)
+Data Manager, [Flanders Marine Institute](https://www.vliz.be)
 
----
+------------------------------------------------------------------------
 
 I am a computational biologist working at delivering techonology solutions that scientists need. My work is focused on research software development and management of geospatial data. I actively maintain a number of R packages and collaborate with [rOpenSci](https://ropensci.org/). Occasionally I deliver workshops and contributions to conferences.
-

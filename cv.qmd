@@ -22,32 +22,31 @@ format:
 
 
 \begin{center}
-    \textbf{Nationality:} Spain - \textbf{Birth:} 1993-10-13 - \textbf{Phone:} +34 664684098 - \textbf{Email:} salvafern@pm.me
+    \textbf{Location:} Ghent, Belgium - \textbf{Nationality:} Spain - \textbf{Birth:} 1993-10-13 - \textbf{Email:} salvafern@pm.me
 \end{center}
 \hrulefill
 ```
-
 ## Experience
 
 2019-07 : **Data Manager**. Flanders Marine Institute, Data Centre. Oostende, Belgium.
 
 Research Software Engineering and Data Management focused on Geospatial Data. A non-exhaustive list of tasks includes:
 
--   Development and maintenance of Free Open Source Software in R. These were packages that read data from REST APIs, OpenCPU or OGC. Software review at rOpenSci. Publication on CRAN. Version control with Git, community collaboration and tackling of issues with Github and Gitlab.
+-   Development and maintenance of Free Open Source Software in R. These are packages that retrieve data from REST APIs, OpenCPU or OGC. Software review at rOpenSci. Publication on CRAN. Version control with Git, community collaboration and tackling of issues with Github and Gitlab.
 
 -   Development and maintenance of R Shiny apps.
 
--   Creation of GIS data products in the framework of three projects: marineregions.org, bio-oracle.org, and the Biology lot of emodnet.eu.
+-   Management and development of GIS data products in the framework of several projects: Marine Regions, Bio-Oracle, the Biology lot of EMODnet and EDITO-Infra.
 
--   Application of FAIR data principles to datasets holding biodiversity occurrences, maritime boundaries or environmental data. Data management in SQL Server, PostgreSQL or MongoDB. Publication of datasets via Geoserver and ERDDAP. Metadata management in several systems such as GeoNetwork or GBIF IPT. Creation of DOIs.
+-   Application of FAIR data principles to datasets holding biodiversity occurrences, maritime boundaries or environmental data. Data management in SQL Server, PostgreSQL and MongoDB. Publication of datasets via Geoserver and ERDDAP. Metadata management in several systems such as GeoNetwork or GBIF IPT. Creation of DOIs.
 
--   Intensive legal research on maritime boundaries and geopolitical conflicts over territory in the framework of marineregions.org.
+-   Intensive legal research on maritime boundaries and geopolitical conflicts over territory in the framework of Marine Regions
 
 ------------------------------------------------------------------------
 
 2018-11/2019-02 : **Data Analyst**. Genera Games. Sevilla, Spain.
 
-Data mining of indie mobile games following a Free-to-play business model. Areas like user retention, engagement or revenue were analyzed using big data of user behavior through PostgreSQL querying. Monthly reports were produced and passed on to the managers for strategic decision making.
+Data mining of indie mobile games following a Free-to-play business model. Areas like user retention, engagement or revenue were statiscially analyzed using big data of user behavior through PostgreSQL querying. Monthly reports were produced and passed on to the managers for strategic decision making.
 
 ## Education
 
@@ -61,10 +60,10 @@ Thesis: *Climate-driven range shifts in marine forests predicted in the Alboran 
 
 ## Tech Stack
 
--   Languages: R, SQL, Bash, Python.
--   Software development: Git, GitLab, GitHub, CI/CD with GitHub Actions.
--   Geospatial Analysis: QGIS, ArcGIS, OGC standards, PostGIS, NetCDF, geoserver, ERDDAP server, Leaflet.
--   Standards: Darwin Core, BODC vocab terms, RDF, INSPIRE.
+-   Languages: R, SQL, Bash, Python, Julia.
+-   Software development: Git, Docker.
+-   Geo-spatial Analysis: QGIS, ArcGIS, PostGIS, NetCDF, geoserver, ERDDAP, Leaflet.
+-   Data standards: Darwin Core, BODC vocab terms, RDF, INSPIRE, OGC.
 -   Communications: Jira Atlassian, Confluence Atlassian, Microsoft Teams, Slack, Outlook.
 
 ## Human languages
@@ -72,6 +71,10 @@ Thesis: *Climate-driven range shifts in marine forests predicted in the Alboran 
 Following the Common European Framework of Reference for Languages:
 
 Spanish (Native). English B2, Portuguese B1, German A2, Dutch A2.
+
+## Publications
+
+-   Assis, J., Fernández Bejarano, S.J., Salazar, V.W., Schepers, L., Gouvêa, L., Fragkopoulou, E., Leclercq, L., Vanhoorne, B., Tyberghein, L., Serrão, E.A., Verbruggen, H., De Clerck, O. (2024) Bio-ORACLE v3.0. Pushing marine data layers to the CMIP6 Earth system models of climate change research. Global Ecology and Biogeography. https://doi.org/10.1111/geb.13813
 
 ## Workshops and Hackathons
 
@@ -95,14 +98,21 @@ Spanish (Native). English B2, Portuguese B1, German A2, Dutch A2.
 -   Supervised and mentored Pohl L., a student in the IMBRSea MSc, in the start phase of the development of the mregions2: an R package to access data from Marineregions.org. The project involved learning software development tools such as version control with Git and GitHub, automatic testing, continuous integration and deployment, and specific knowledge writing R extensions. The contributions of Pohl can be found at: https://github.com/lifewatch/mregions2/commits?author=lottepohl (2022-04/2020-06)
 -   Supervised and mentored D'Hurlaborde A., a student in the IMBRSea MSc, in the creation of a new GIS data product: the Marine Regions' Extended Continental Shelves v1. The project involved extensive research on the United Nations Law of the Sea, data management, and the use of geospatial software tools. The results of the internship were presented on a dedicated website created by the student: https://sites.google.com/imbrsea.eu/alicedhurlaborde/home. (2020-04/2020-06)
 
-## Software Packages
+## Software
+
+-   Fernández Bejarano, S.J. (2024). biooracler: Import environmental ocean data from Bio-Oracle via ERDDAP. R package version 0.0.0.9000, https://bio-oracle.org/, https://github.com/bio-oracle/biooracler.
 
 -   Chamberlain S, Schepers L, Fernández-Bejarano S (2023). mregions: Marine Regions Data from 'Marineregions.org'. https://docs.ropensci.org/mregions/, https://github.com/ropensci/mregions.
--   Fernández-Bejarano S, De Pooter D (2023). eurobis: Download data from EurOBIS using the LifeWatch/EMODnet-Biology Web Feature Services. https://github.com/lifewatch/eurobis, https://lifewatch.github.io/eurobis/.
--   Fernández-Bejarano S, Pohl L (2023). mregions2: Access Data from Marineregions.org: The Marine Regions Gazetteer and the Marine Regions Data Products. https://github.com/lifewatch/mregions2.
--   Hernandez F, Dillen N, Fernández-Bejarano S (2023). lwdataexplorer: Access to data from the LifeWatch Data Explorer. R package version 0.0.0.9000, https://lifewatch.github.io/lwdataexplorer/.
--   Krystalli A, Fernández-Bejarano S, Salmon M (2023). EMODnetWFS: Access EMODnet Web Feature Service data through R. R package version 2.0.1.9001. Integrated data products created under the European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European Union under Regulation (EU) No 508/2014 of the European Parliament and of the Council of 15 May 2014 on the European Maritime and Fisheries Fund, https://github.com/EMODnet/EMODnetWFS.
--   Bosch S, Fernández-Bejarano S (2022). sdmpredictors: Species Distribution Modelling Predictor Datasets. R package version 0.2.14, http://lifewatch.github.io/sdmpredictors/.
+
+-   Fernández Bejarano, S.J., De Pooter D (2023). eurobis: Download data from EurOBIS using the LifeWatch/EMODnet-Biology Web Feature Services. https://github.com/lifewatch/eurobis, https://lifewatch.github.io/eurobis/.
+
+-   Fernández Bejarano, S.J., Pohl L (2023). mregions2: Access Data from Marineregions.org: The Marine Regions Gazetteer and the Marine Regions Data Products. https://github.com/lifewatch/mregions2.
+
+-   Hernandez F, Dillen N, Fernández Bejarano, S.J. (2023). lwdataexplorer: Access to data from the LifeWatch Data Explorer. R package version 0.0.0.9000, https://lifewatch.github.io/lwdataexplorer/.
+
+-   Krystalli A, Fernández Bejarano, S.J., Salmon M (2023). EMODnetWFS: Access EMODnet Web Feature Service data through R. R package version 2.0.1.9001. Integrated data products created under the European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European Union under Regulation (EU) No 508/2014 of the European Parliament and of the Council of 15 May 2014 on the European Maritime and Fisheries Fund, https://github.com/EMODnet/EMODnetWFS.
+
+-   Bosch S, Fernández Bejarano S.J (2022). sdmpredictors: Species Distribution Modelling Predictor Datasets. R package version 0.2.14, http://lifewatch.github.io/sdmpredictors/.
 
 ## Reviews
 
